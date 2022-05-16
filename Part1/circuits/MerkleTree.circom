@@ -27,6 +27,7 @@ template CheckRoot(n) { // compute the root of a MerkleTree of n Levels
         writeIndex++;
         hasherIdx++;
     }
+    
     // populate 2nd half of hash arr
     while(writeIndex<2**n-1){
         hashArr[hasherIdx].inputs[0] <== intermediateHashes[readIndex];

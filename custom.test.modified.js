@@ -174,6 +174,7 @@ describe('Custom Tests', function () {
     })
     await transaction({ tornadoPool, inputs: [aliceDepositUtxo], outputs: [bobSendUtxo, aliceChangeUtxo] })
 
+    
     // Bob parses chain to detect incoming funds
     const filter = tornadoPool.filters.NewCommitment()
     const fromBlock = await ethers.provider.getBlock()
